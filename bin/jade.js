@@ -167,7 +167,7 @@ function renderFile(path) {
             var output = options.client ? fn : fn(options);
             fs.writeFile(path, output, function(err){
               if (err) throw err;
-              console.log('  \033[90mrendered \033[36m%s\033[0m', path);
+              console.log('  \x1b[90mrendered \x1b[36m%s\x1b[0m', path);
             });
           } catch (e) {
             if (options.watch) {
